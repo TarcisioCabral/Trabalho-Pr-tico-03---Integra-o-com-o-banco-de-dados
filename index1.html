@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shop Homepage - Start</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-eX0IvO7hMzFEzIXSNcjyGP9B6vL4Cis3PUiNl5pH2Vg3OqmbhPzzlJKWB+3jxGzN"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark col-sm-12">
+        <a class="navbar-brand offset-md-1" href="#">Start Bootstrap</a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <form class="d-flex ml-auto" role="search">
+                <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="searchButton" class="btn btn-secondary" type="button">Pesquisar</button>
+            </form>
+    
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
+                <a class="nav-item nav-link" href="listagem.html">Listing</a>
+                <a class="nav-item nav-link" href="cadastro.html">Product Registration</a>
+            </div>
+        </div>
+    </nav>
+    
+        <div class="row col-sm-12">
+            <div class="col-md-2 offset-md-1">
+                <table class="table mt-4">
+                    <tbody>
+                        <h1 class="display-3 mt-5 ">Shop <br> Name</h1>
+                        <tr>
+                            <td><a href="#" class="text-primary category-link" data-category="electronics">Electronics</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="text-primary category-link" data-category="jewelery">Jewelery</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="text-primary category-link" data-category="men's clothing">Men's Clothing</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="text-primary category-link" data-category="women's clothing">Women's Clothing</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-8 mt-5">
+                <!-- Lista de Produtos -->
+                <div id="produtos-section" class="d-flex flex-wrap mt-1 justify-content-between"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

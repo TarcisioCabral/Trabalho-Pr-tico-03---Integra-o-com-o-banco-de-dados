@@ -1,0 +1,40 @@
+/* detalhe.css */
+
+body {
+    background-color: #d3d6d8;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.product-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    text-align: center;
+}
+
+.product-image {
+    max-width: 200%; /* Altere este valor conforme necessário */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #007bff;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    margin-top: 15px;
+    line-height: 1.6;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+    <title>Shop Homepage - Product Registration</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a id="redirectLink" class="navbar-brand offset-md-1" href="index1.html">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto col-sm-4">
+                <a class="nav-item nav-link" href="index1.html">Home <span class="sr-only">(Página atual)</span></a>
+                <a class="nav-item nav-link" href="listagem.html">Listing</a>
+                <a class="nav-item nav-link" href="cadastro.html">Product Registration</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Product registration</h2>
+        <form id="cadastroForm">
+            <div class="form-group">
+                <label for="titulo">Título:</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" required>
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descrição:</label>
+                <textarea class="form-control" id="descricao" name="descricao" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="preco">Preço:</label>
+                <input type="number" class="form-control" id="preco" name="preco" step="0.01" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="categoria">Category:</label>
+                <select class="form-control" id="categoria" name="categoria" required>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Jewelery">Jewelery</option>
+                    <option value="MensClothing">Men's Clothing</option>
+                    <option value="WomensClothing">Women's Clothing</option>
+                </select>
+            </div>
+            <button type="submit" name="btnCadastrar" class="btn btn-primary">Cadastrar</button>
+        </form>
+        <button id="cadastroMassivoBtn" class="btn btn-success mt-3">Cadastro em Massa</button>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#cadastroForm').on('submit', function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                    url: 'http://localhost:3000/cadastro', // Substitua com a URL da sua API
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        titulo: $('#titulo').val(),
+                        descricao: $('#descricao').val(),
+                        preco: $('#preco').val(),
+                        categoria: $('#categoria').val()
+                    }),
+                    success: function(response) {
+                        alert('Produto cadastrado com sucesso!');
+                    },
+                    error: function(error) {
+                        alert('Erro ao cadastrar produto: ' + error.responseText);
+                    }
+                });
+            });
+        });
+         // Função para realizar o cadastro em massa
+         function cadastrarEmMassa() {
+            $.ajax({
+                url: 'http://localhost:3000/cadastro-massivo', // Substitua com a URL da sua API
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(produtosEmMassa),
+                success: function(response) {
+                    alert('Produtos cadastrados em massa com sucesso!');
+                },
+                error: function(error) {
+                    alert('Erro ao cadastrar produtos em massa: ' + error.responseText);
+                }
+            });
+        }
+
+        // Associando a função ao clique do botão
+        $('#cadastroMassivoBtn').on('click', cadastrarEmMassa);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

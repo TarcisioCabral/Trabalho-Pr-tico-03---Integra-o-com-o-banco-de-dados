@@ -1,0 +1,21 @@
+Usei node pode meu codigo em php esta dando conflito de CROS em node tambem tive esse problema 
+Mas a resolução do problema era mais simples 
+Ficou faltando a edição e cadastar os prudotos da api, mas eles existem la so não terminei de fazer 
+
+
+Cross-Origin Resource Sharing (CORS) é uma funcionalidade de segurança 
+implementada pelos navegadores web para controlar como páginas da web 
+em um domínio podem solicitar e interagir com recursos hospedados em 
+outro domínio. É um mecanismo crucial para evitar possíveis riscos de 
+segurança associados a solicitações entre origens diferentes.
+
+Quando uma página da web faz uma solicitação HTTP para um domínio diferente 
+(solicitação entre origens) usando técnicas como XMLHttpRequest ou a API Fetch,
+ os navegadores aplicam a política de mesma origem. Essa política restringe as
+ páginas da web de fazerem solicitações a um domínio diferente daquele que 
+serviu a página da web. O CORS permite que os servidores especifiquem quais 
+origens têm permissão para acessar seus recursos, relaxando a política de 
+mesma origem para essas origens aprovadas.
+
+assim que achei como resolver 
+fiz ele aceitar os serviodres diferente 

@@ -1,0 +1,65 @@
+
+body {
+    background-color: #f4f4f4; /* Substitua pela cor desejada de cinza claro */
+    margin: 0;
+    padding: 0;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    padding: 1rem;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f8f9fa;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Estilo para os links de categoria */
+.category-link {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.category-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Espaçamento geral dos cards */
+.card {
+    margin-bottom: 20px !important;
+}
+
+/* Ajustes de espaçamento em diferentes direções para telas grandes */
+@media (min-width: 992px) {
+    .card {
+        margin-right: 15px; /* Espaçamento à direita */
+        margin-left: 10px; /* Espaçamento à esquerda */
+    }
+}
+
+/* Ajustes de espaçamento em diferentes direções para tablets */
+@media (max-width: 767px) {
+    .card {
+        margin-bottom: 30px !important; /* Espaçamento inferior reduzido para tablets */
+        margin-left: 10px; /* Adiciona espaço à esquerda para telas menores */
+    }
+}
